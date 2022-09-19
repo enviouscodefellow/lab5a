@@ -31,13 +31,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   //eslint-disable-line
-let firstElement = a * b;
-let secondElement = `The product of ${a} and ${b} is ${firstElement}.`;
+  let firstElement = a * b;
+  let secondElement = `The product of ${a} and ${b} is ${firstElement}.`;
   return [firstElement, secondElement];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -55,10 +55,26 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+
+  let firstAddition = sum(a, b);
+  // console.log(firstAddition);
+  let firstElement = sum(firstAddition[0], c);
+  // console.log(firstElement);
+  let firstMultiplication = multiply(a, b);
+  // console.log(firstMultiplication);
+  let secondElement = multiply(firstMultiplication[0], c);
+  // console.log(secondElement);
+  let thirdElement = `${a} and ${b} and ${c} sum to ${firstElement[0]}.`;
+  // console.log(thirdElement);
+  let fourthElement = `The product of ${a} and ${b} and ${c} is ${secondElement[0]}.`;
+  // console.log(fourthElement);
+  let answer = [firstElement[0], secondElement[0], thirdElement, fourthElement];
+  // console.log(answer);
+  return answer;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
